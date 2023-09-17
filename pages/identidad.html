@@ -15,6 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Teko:wght@300&display=swap"
         rel="stylesheet">
 
+    <!-- LINK BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
     <!-- LINK CSS -->
     <link rel="stylesheet" href="../css/styles.css">
 
@@ -26,22 +30,32 @@
     <!-- HEADER -->
     <header id="header">
 
-        <!-- LOGO PAGINA -->
-        <div class="containerLogo">
-            <img src="../img/logoBarca.png" alt="FCBarcelona" class="logo">
-        </div>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
 
-        <!-- MENU -->
-        <nav class="containerMenu">
-            <ul class="menu">
-                <li><a href="../index.html" class="letraMenu">Inicio</a></li>
-                <li><a href="plantilla.html" class="letraMenu">Plantilla</a></li>
-                <li><a href="historia.html" class="letraMenu">Historia</a></li>
-                <li><a href="identidad.html" class="letraMenu">Identidad</a></li>
-                <li><a href="socio.html" class="letraMenu">Hazte Socio</a></li>
-            </ul>
+                <!-- LOGO PAGINA -->
+                <div>
+                    <img src="../img/logoBarca.png" alt="FCBarcelona" class="logo">
+                </div>
+
+                <!-- MENU -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse lista-menu" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link letraMenu" href="../index.html">Inicio</a>
+                        <a class="nav-link letraMenu" href="plantilla.html">Plantilla</a>
+                        <a class="nav-link letraMenu" href="historia.html">Historia</a>
+                        <a class="nav-link letraMenu" href="identidad.html">Identidad</a>
+                        <a class="nav-link letraMenu" href="socio.html">Hazte Socio</a>
+                    </div>
+                </div>
+            </div>
         </nav>
-        <hr class="linea">
 
     </header>
 
@@ -115,6 +129,10 @@
         </div>
     </footer>
 
+    <!-- SCRIPT BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>

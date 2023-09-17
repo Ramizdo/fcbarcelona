@@ -64,13 +64,18 @@ body {
 
 /* ++++++++++++++++++++++++++++++ TITULO Y SUBTITULO ++++++++++++++++++++++++++++++ */
 .titulo {
+    font-size: 1.5rem;
     color: #a50044;
-    margin: 0px 0px 15px 10px;
+    margin: 0px 0px 15px 40px;
+}
+
+.containerSubTitulo {
+    color: #004d98;
+    margin: 0px 0px 15px 60px;
 }
 
 .subTitulo {
-    color: #004d98;
-    margin: 0px 0px 15px 20px;
+    font-size: 1.5rem;
 }
 
 /* ++++++++++++++++++++++++++++++ INDEX ++++++++++++++++++++++++++++++ */
