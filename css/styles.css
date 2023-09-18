@@ -70,11 +70,11 @@ body {
 }
 
 .containerSubTitulo {
-    color: #004d98;
     margin: 0px 0px 15px 60px;
 }
 
 .subTitulo {
+    color: #004d98;
     font-size: 1.5rem;
 }
 
@@ -211,19 +211,27 @@ body {
     font-size: 2.5rem;
 }
 
-/* ++++++++++++++++++++++++++++++ HISTORIA ++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++ PALMARES ++++++++++++++++++++++++++++++ */
 
-.containerHistoria {
-    width: 1100px;
-    margin: 0px auto;
+.containerPalmares {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.containerHistoria p {
+.containerPalmares p {
     text-align: justify;
     text-indent: 50px;
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
+
+.texto {
+    text-align: justify;
+    text-indent: 20px;
+}
+
 
 /* ++++++++++++++++++++++++++++++ IDENTIDAD ++++++++++++++++++++++++++++++ */
 
