@@ -18,7 +18,6 @@ body {
 
 #header {
     background-color: #004d98;
-    /* padding: 20px; */
     width: 100%;
     height: 120px;
     position: fixed;
@@ -32,6 +31,23 @@ body {
 }
 
 /* ++++++++++++++++++++++++++++++ MENU ++++++++++++++++++++++++++++++ */
+
+.container-fluid {
+    background-color: #004d98;
+}
+
+.navbar-toggler {
+    background-color: #ffed02;
+    color: #004d98;
+}
+
+.navbar-nav a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: #ffed02;
+}
 
 .lista-menu {
     display: flex;
@@ -47,7 +63,7 @@ body {
 }
 
 .letraMenu:hover {
-    color: #ffed02;
+    color: #FFFFFF;
 }
 
 /* ++++++++++++++++++++++++++++++ MAIN ++++++++++++++++++++++++++++++ */
@@ -60,6 +76,12 @@ body {
 
 .section {
     padding: 110px 0px 50px 0px;
+}
+
+/* ++++++++++++++++++++++++++++++ CAROUSEL ++++++++++++++++++++++++++++++ */
+
+.carousel {
+    margin-bottom: 30px;
 }
 
 /* ++++++++++++++++++++++++++++++ TITULO Y SUBTITULO ++++++++++++++++++++++++++++++ */
@@ -79,17 +101,6 @@ body {
 }
 
 /* ++++++++++++++++++++++++++++++ INDEX ++++++++++++++++++++++++++++++ */
-
-.containerNombreEquipo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel {
-    margin-bottom: 30px;
-}
 
 .containerProximosPartidos1 {
     display: flex;
@@ -136,24 +147,25 @@ body {
     align-items: center;
 }
 
-.spanContainerPartido1 {
-    margin: 0px 30px;
+.logoEquipos {
+    width: 50px;
+    height: 50px;
 }
 
-.spanContainerPartido2 {
-    margin: 0px 30px;
+.containerNombreEquipo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .spanContainerPartido {
     margin: 0px;
-    /* box-sizing: border-box; */
     font-size: 1.5rem;
 }
 
-.logoEquipos {
-    width: 50px;
-    height: 50px;
-    /* padding: 0 20px 0 20px; */
+.vs {
+    margin: 0px 30px;
 }
 
 @media (min-width: 992px) {
@@ -167,59 +179,6 @@ body {
         display: flex;
         flex-direction: column;
     }
-}
-
-.containerProximosPartidos {
-    position: relative;
-    background-color: rgba(165, 0, 68, 0.1);
-    color: #000000;
-    height: 100px;
-    padding-top: 50px;
-    margin-bottom: 15px;
-}
-
-.containerFecha {
-    width: 20%;
-    height: 50px;
-    text-align: center;
-    font-size: 1.2rem;
-    padding-top: 5px;
-    box-sizing: border-box;
-}
-
-.containerLogoLaLiga {
-    position: relative;
-    width: 20%;
-    height: 50px;
-    top: -50px;
-    left: 20%;
-    text-align: center;
-    padding-top: 10px;
-    box-sizing: border-box;
-}
-
-.containerJornada {
-    position: relative;
-    width: 20%;
-    height: 50px;
-    top: -100px;
-    left: 40%;
-    text-align: center;
-    font-size: 1.5rem;
-    padding-top: 10px;
-    box-sizing: border-box;
-
-}
-
-.containerPartido {
-    position: absolute;
-    width: 40%;
-    height: 50px;
-    top: 0px;
-    left: 60%;
-    text-align: center;
-    padding-top: 50px;
-    color: #000000;
 }
 
 
