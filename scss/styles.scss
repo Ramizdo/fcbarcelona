@@ -1,0 +1,421 @@
+/* ++++++++++++++++++++++++++++++ RESET ++++++++++++++++++++++++++++++ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ++++++++++++++++++++++++++++++ BODY ++++++++++++++++++++++++++++++ */
+
+body {
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Teko', sans-serif;
+}
+
+/* ++++++++++++++++++++++++++++++ HEADER ++++++++++++++++++++++++++++++ */
+
+#header {
+    background-color: #004d98;
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    margin: 10px 0px 0px 30px;
+}
+
+/* ++++++++++++++++++++++++++++++ MENU ++++++++++++++++++++++++++++++ */
+
+.container-fluid {
+    background-color: #004d98;
+}
+
+.navbar-toggler {
+    background-color: #ffed02;
+    color: #004d98;
+}
+
+.navbar-nav a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: #ffed02;
+}
+
+.lista-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.letraMenu {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.letraMenu:hover {
+    color: #FFFFFF;
+}
+
+/* ++++++++++++++++++++++++++++++ MAIN ++++++++++++++++++++++++++++++ */
+
+.main {
+    padding-top: 20px;
+}
+
+/* ++++++++++++++++++++++++++++++ SECTION ++++++++++++++++++++++++++++++ */
+
+.section {
+    padding: 110px 0px 50px 0px;
+}
+
+/* ++++++++++++++++++++++++++++++ CAROUSEL ++++++++++++++++++++++++++++++ */
+
+.carousel {
+    margin-bottom: 30px;
+}
+
+/* ++++++++++++++++++++++++++++++ TITULO Y SUBTITULO ++++++++++++++++++++++++++++++ */
+.titulo {
+    font-size: 1.5rem;
+    color: #a50044;
+    margin: 0px 0px 15px 40px;
+}
+
+.containerSubTitulo {
+    margin: 0px 0px 15px 60px;
+}
+
+.subTitulo {
+    color: #004d98;
+    font-size: 1.5rem;
+}
+
+/* ++++++++++++++++++++++++++++++ INDEX ++++++++++++++++++++++++++++++ */
+
+.containerProximosPartidos1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(165, 0, 68, 0.1);
+    color: #000000;
+    padding: 20px 0px;
+    margin-bottom: 30px;
+}
+
+.containerFecha1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerFecha1 p {
+    font-size: 1.2rem;
+    margin: 0px;
+}
+
+.containerLogoLaLiga1 {
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+.logoLaLiga {
+    width: 110px;
+    height: 30px;
+}
+
+.containerJornada1 p {
+    font-size: 1.2rem;
+    margin: 0px;
+}
+
+.containerPartido1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoEquipos {
+    width: 50px;
+    height: 50px;
+}
+
+.containerNombreEquipo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.spanContainerPartido {
+    margin: 0px;
+    font-size: 1.5rem;
+}
+
+.vs {
+    margin: 0px 30px;
+}
+
+@media (min-width: 992px) {
+
+    .containerProximosPartidos1 {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .containerVersus {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* ++++++++++++++++++++++++++++++ PLANTILLA ++++++++++++++++++++++++++++++ */
+
+.containerPortero,
+.containerDefensa,
+.containerCentrocampista,
+.containerDelantero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.fotoJugador {
+    width: 100vw;
+    max-width: 100%;
+}
+
+.biografiaJugador {
+    background-color: rgba(165, 0, 68, 0.1);
+    max-width: 100%;
+    width: 100vw;
+    padding: 30px 30px 30px 30px;
+    box-sizing: border-box;
+}
+
+.biografiaJugador p {
+    text-align: justify;
+    text-indent: 50px;
+    font-size: 1.1rem;
+}
+
+.letraRoja {
+    color: #a50044;
+    font-size: 2.5rem;
+}
+
+@media (min-width: 992px) {
+
+    .containerPortero {
+        flex-direction: row;
+        margin-bottom: 0px;
+    }
+
+    .containerDefensa {
+        flex-direction: row-reverse;
+        margin-bottom: 0px;
+    }
+
+    .containerCentrocampista {
+        flex-direction: row;
+        margin-bottom: 0px;
+    }
+
+    .containerDelantero {
+        flex-direction: row-reverse;
+        margin-bottom: 0px;
+    }
+
+    .fotoJugador {
+        width: 468px;
+        height: 350px;
+    }
+
+    .biografiaJugador {
+        width: 468px;
+        height: 350px;
+    }
+
+    .biografiaJugador p {
+        font-size: 1rem;
+    }
+
+    .letraRoja {
+        color: #a50044;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .fotoJugador {
+        width: 550px;
+        height: 350px;
+    }
+
+    .biografiaJugador {
+        width: 550px;
+        height: 350px;
+    }
+
+    .biografiaJugador p {
+        font-size: 1.1rem;
+    }
+
+    .letraRoja {
+        font-size: 2.5rem;
+    }
+}
+
+/* ++++++++++++++++++++++++++++++ PALMARES ++++++++++++++++++++++++++++++ */
+
+.containerPalmares {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerPalmares p {
+    text-align: justify;
+    text-indent: 50px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.texto {
+    text-align: justify;
+    text-indent: 20px;
+}
+
+
+/* ++++++++++++++++++++++++++++++ IDENTIDAD ++++++++++++++++++++++++++++++ */
+
+.containerBloque {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100vw;
+}
+
+.containerBloque img {
+    max-width: 100%;
+}
+
+.bloque {
+    width: 100vw;
+    height: 40vh;
+    max-width: 100%;
+}
+
+.bloqueEscudo {
+    max-width: 100%;
+    width: 100vw;
+    text-align: justify;
+    padding: 30px 30px 30px 30px;
+    box-sizing: border-box;
+}
+
+.bloqueEscudo p {
+    text-indent: 50px;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 992px) {
+
+    .containerBloque {
+        flex-direction: row;
+    }
+}
+
+/* ++++++++++++++++++++++++++++++ HAZTE SOCIO ++++++++++++++++++++++++++++++ */
+
+.containerFormularioImagen {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(165, 0, 68, 0.1);
+    color: #a50044;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    gap: 5px;
+}
+
+label,
+input {
+    width: 50vw;
+}
+
+.boton {
+    width: 50vw;
+    height: 30px;
+    background-color: #004d98;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+}
+
+.imgSocio {
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+
+    .containerFormularioImagen {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    label,
+    input {
+        width: 20vw;
+    }
+
+    .caja {
+        width: 450px;
+        height: 450px;
+    }
+
+    .imgSocio {
+        width: 450px;
+        height: 450px;
+    }
+
+    .boton {
+        width: 20vw;
+    }
+}
+
+/* ++++++++++++++++++++++++++++++ FOOTER ++++++++++++++++++++++++++++++ */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #ffed02;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
