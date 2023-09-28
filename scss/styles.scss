@@ -41,12 +41,14 @@ body {
     color: #004d98;
 }
 
-.navbar-nav a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    color: #ffed02;
+.navbar-nav {
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        color: #ffed02;
+    }
 }
 
 .lista-menu {
@@ -60,10 +62,10 @@ body {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 1.8rem;
-}
 
-.letraMenu:hover {
-    color: #FFFFFF;
+    &:hover {
+        color: #FFFFFF;
+    }
 }
 
 /* ++++++++++++++++++++++++++++++ MAIN ++++++++++++++++++++++++++++++ */
@@ -118,11 +120,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-.containerFecha1 p {
-    font-size: 1.2rem;
-    margin: 0px;
+    p {
+        font-size: 1.2rem;
+        margin: 0px;
+    }
 }
 
 .containerLogoLaLiga1 {
@@ -135,9 +137,11 @@ body {
     height: 30px;
 }
 
-.containerJornada1 p {
-    font-size: 1.2rem;
-    margin: 0px;
+.containerJornada1 {
+    p {
+        font-size: 1.2rem;
+        margin: 0px;
+    }
 }
 
 .containerPartido1 {
@@ -206,12 +210,12 @@ body {
     width: 100vw;
     padding: 30px 30px 30px 30px;
     box-sizing: border-box;
-}
 
-.biografiaJugador p {
-    text-align: justify;
-    text-indent: 50px;
-    font-size: 1.1rem;
+    p {
+        text-align: justify;
+        text-indent: 50px;
+        font-size: 1.1rem;
+    }
 }
 
 .letraRoja {
@@ -249,10 +253,10 @@ body {
     .biografiaJugador {
         width: 468px;
         height: 350px;
-    }
 
-    .biografiaJugador p {
-        font-size: 1rem;
+        p {
+            font-size: 1rem;
+        }
     }
 
     .letraRoja {
@@ -270,10 +274,10 @@ body {
     .biografiaJugador {
         width: 550px;
         height: 350px;
-    }
 
-    .biografiaJugador p {
-        font-size: 1.1rem;
+        p {
+            font-size: 1.1rem;
+        }
     }
 
     .letraRoja {
@@ -288,13 +292,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-.containerPalmares p {
-    text-align: justify;
-    text-indent: 50px;
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    p {
+        text-align: justify;
+        text-indent: 50px;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
 }
 
 .texto {
@@ -312,10 +316,10 @@ body {
     align-items: center;
     margin-bottom: 30px;
     width: 100vw;
-}
 
-.containerBloque img {
-    max-width: 100%;
+    img {
+        max-width: 100%;
+    }
 }
 
 .bloque {
@@ -330,11 +334,11 @@ body {
     text-align: justify;
     padding: 30px 30px 30px 30px;
     box-sizing: border-box;
-}
 
-.bloqueEscudo p {
-    text-indent: 50px;
-    font-size: 1.1rem;
+    p {
+        text-indent: 50px;
+        font-size: 1.1rem;
+    }
 }
 
 @media (min-width: 992px) {
