@@ -1,3 +1,25 @@
+/*------ PALETA DE COLORES ------*/
+$color-primario: #004d98;
+$color-secundario: #a50044;
+$color-secundario-opacity: rgba($color-secundario, 0.1);
+;
+$color-terciario: #ffed02;
+$color-blanco: #FFFFFF;
+
+/*------ FUENTE PRINCIPAL ------*/
+$font-principal: 'Teko', sans-serif;
+
+/*------ TAMAÑO FUENTE BASE ------*/
+$font-size-base: 1.5rem;
+
+/*------ RESOLUCIONES DE PANTALLA ------*/
+$tablet: 768px;
+$desktop: 992px;
+$desktop-xl: 1200px;
+
+/*------ ESPACIADO, MARGENES, PADDING ------*/
+$px-general: 10px;
+
 /* ++++++++++++++++++++++++++++++ RESET ++++++++++++++++++++++++++++++ */
 
 * {
@@ -11,13 +33,13 @@
 body {
     position: relative;
     min-height: 100vh;
-    font-family: 'Teko', sans-serif;
+    font-family: $font-principal;
 }
 
 /* ++++++++++++++++++++++++++++++ HEADER ++++++++++++++++++++++++++++++ */
 
 #header {
-    background-color: #004d98;
+    background-color: $color-primario;
     width: 100%;
     height: 120px;
     position: fixed;
@@ -33,12 +55,12 @@ body {
 /* ++++++++++++++++++++++++++++++ MENU ++++++++++++++++++++++++++++++ */
 
 .container-fluid {
-    background-color: #004d98;
+    background-color: $color-primario;
 }
 
 .navbar-toggler {
-    background-color: #ffed02;
-    color: #004d98;
+    background-color: $color-terciario;
+    color: $color-primario;
 }
 
 .navbar-nav {
@@ -47,7 +69,13 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
-        color: #ffed02;
+        color: $color-terciario;
+        text-decoration: none;
+        font-size: $font-size-base + .3rem;
+
+        &:hover {
+            color: $color-blanco;
+        }
     }
 }
 
@@ -58,20 +86,10 @@ body {
     align-items: flex-end;
 }
 
-.letraMenu {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 1.8rem;
-
-    &:hover {
-        color: #FFFFFF;
-    }
-}
-
 /* ++++++++++++++++++++++++++++++ MAIN ++++++++++++++++++++++++++++++ */
 
 .main {
-    padding-top: 20px;
+    padding-top: $px-general * 2;
 }
 
 /* ++++++++++++++++++++++++++++++ SECTION ++++++++++++++++++++++++++++++ */
@@ -83,13 +101,13 @@ body {
 /* ++++++++++++++++++++++++++++++ CAROUSEL ++++++++++++++++++++++++++++++ */
 
 .carousel {
-    margin-bottom: 30px;
+    margin-bottom: $px-general * 3;
 }
 
 /* ++++++++++++++++++++++++++++++ TITULO Y SUBTITULO ++++++++++++++++++++++++++++++ */
 .titulo {
-    font-size: 1.5rem;
-    color: #a50044;
+    font-size: $font-size-base;
+    color: $color-secundario;
     margin: 0px 0px 15px 40px;
 }
 
@@ -98,8 +116,8 @@ body {
 }
 
 .subTitulo {
-    color: #004d98;
-    font-size: 1.5rem;
+    color: $color-primario;
+    font-size: $font-size-base;
 }
 
 /* ++++++++++++++++++++++++++++++ INDEX ++++++++++++++++++++++++++++++ */
@@ -109,10 +127,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(165, 0, 68, 0.1);
-    color: #000000;
-    padding: 20px 0px;
-    margin-bottom: 30px;
+    background-color: $color-secundario-opacity;
+    padding: $px-general*2 0px;
+    margin-bottom: $px-general*3;
 }
 
 .containerFecha1 {
@@ -122,7 +139,7 @@ body {
     align-items: center;
 
     p {
-        font-size: 1.2rem;
+        font-size: $font-size-base - .3rem;
         margin: 0px;
     }
 }
@@ -139,7 +156,7 @@ body {
 
 .containerJornada1 {
     p {
-        font-size: 1.2rem;
+        font-size: $font-size-base - .3rem;
         margin: 0px;
     }
 }
@@ -165,14 +182,14 @@ body {
 
 .spanContainerPartido {
     margin: 0px;
-    font-size: 1.5rem;
+    font-size: $font-size-base;
 }
 
 .vs {
-    margin: 0px 30px;
+    margin: 0px $px-general * 3;
 }
 
-@media (min-width: 992px) {
+@media (min-width: $desktop) {
 
     .containerProximosPartidos1 {
         flex-direction: row;
@@ -185,7 +202,6 @@ body {
     }
 }
 
-
 /* ++++++++++++++++++++++++++++++ PLANTILLA ++++++++++++++++++++++++++++++ */
 
 .containerPortero,
@@ -196,7 +212,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: $px-general * 3;
 }
 
 .fotoJugador {
@@ -205,25 +221,25 @@ body {
 }
 
 .biografiaJugador {
-    background-color: rgba(165, 0, 68, 0.1);
+    background-color: $color-secundario-opacity;
     max-width: 100%;
     width: 100vw;
-    padding: 30px 30px 30px 30px;
+    padding: $px-general * 3;
     box-sizing: border-box;
 
     p {
         text-align: justify;
-        text-indent: 50px;
-        font-size: 1.1rem;
+        text-indent: $px-general * 5;
+        font-size: $font-size-base - .4rem;
     }
 }
 
 .letraRoja {
-    color: #a50044;
-    font-size: 2.5rem;
+    color: $color-secundario;
+    font-size: $font-size-base + 1rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: $desktop) {
 
     .containerPortero {
         flex-direction: row;
@@ -255,17 +271,17 @@ body {
         height: 350px;
 
         p {
-            font-size: 1rem;
+            font-size: $font-size-base - .5rem;
         }
     }
 
     .letraRoja {
-        color: #a50044;
-        font-size: 2rem;
+        color: $color-secundario;
+        font-size: $font-size-base + .5rem;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-xl) {
     .fotoJugador {
         width: 550px;
         height: 350px;
@@ -276,12 +292,12 @@ body {
         height: 350px;
 
         p {
-            font-size: 1.1rem;
+            font-size: $font-size-base - .4rem;
         }
     }
 
     .letraRoja {
-        font-size: 2.5rem;
+        font-size: $font-size-base + 1rem;
     }
 }
 
@@ -295,17 +311,16 @@ body {
 
     p {
         text-align: justify;
-        text-indent: 50px;
-        font-size: 1.5rem;
-        margin-bottom: 30px;
+        text-indent: $px-general * 5;
+        font-size: $font-size-base;
+        margin-bottom: $px-general * 3;
     }
 }
 
 .texto {
     text-align: justify;
-    text-indent: 20px;
+    text-indent: $px-general * 2;
 }
-
 
 /* ++++++++++++++++++++++++++++++ IDENTIDAD ++++++++++++++++++++++++++++++ */
 
@@ -314,7 +329,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: $px-general * 3;
     width: 100vw;
 
     img {
@@ -332,16 +347,16 @@ body {
     max-width: 100%;
     width: 100vw;
     text-align: justify;
-    padding: 30px 30px 30px 30px;
+    padding: $px-general * 3;
     box-sizing: border-box;
 
     p {
-        text-indent: 50px;
-        font-size: 1.1rem;
+        text-indent: $px-general * 5;
+        font-size: $font-size-base - .4rem;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $desktop) {
 
     .containerBloque {
         flex-direction: row;
@@ -361,11 +376,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgba(165, 0, 68, 0.1);
-    color: #a50044;
-    padding: 20px 0px;
+    background-color: $color-secundario-opacity;
+    color: $color-secundario;
+    padding: $px-general*2 0px;
     box-sizing: border-box;
-    gap: 5px;
+    gap: $px-general - 5px;
 }
 
 label,
@@ -376,9 +391,9 @@ input {
 .boton {
     width: 50vw;
     height: 30px;
-    background-color: #004d98;
-    color: #FFFFFF;
-    font-size: 1.1rem;
+    background-color: $color-primario;
+    color: $color-blanco;
+    font-size: $font-size-base - .4rem;
 }
 
 .imgSocio {
@@ -418,7 +433,7 @@ input {
 .footer {
     position: absolute;
     bottom: 0;
-    background-color: #ffed02;
+    background-color: $color-terciario;
     width: 100%;
     height: 20px;
     text-align: center;

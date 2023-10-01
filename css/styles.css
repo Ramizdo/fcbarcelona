@@ -1,3 +1,9 @@
+@charset "UTF-8";
+/*------ PALETA DE COLORES ------*/
+/*------ FUENTE PRINCIPAL ------*/
+/*------ TAMAÑO FUENTE BASE ------*/
+/*------ RESOLUCIONES DE PANTALLA ------*/
+/*------ ESPACIADO, MARGENES, PADDING ------*/
 /* ++++++++++++++++++++++++++++++ RESET ++++++++++++++++++++++++++++++ */
 * {
   margin: 0;
@@ -43,6 +49,11 @@ body {
   justify-content: center;
   align-items: flex-end;
   color: #ffed02;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+.navbar-nav a:hover {
+  color: #FFFFFF;
 }
 
 .lista-menu {
@@ -50,15 +61,6 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-}
-
-.letraMenu {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-size: 1.8rem;
-}
-.letraMenu:hover {
-  color: #FFFFFF;
 }
 
 /* ++++++++++++++++++++++++++++++ MAIN ++++++++++++++++++++++++++++++ */
@@ -99,7 +101,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgba(165, 0, 68, 0.1);
-  color: #000000;
   padding: 20px 0px;
   margin-bottom: 30px;
 }
@@ -189,7 +190,7 @@ body {
   background-color: rgba(165, 0, 68, 0.1);
   max-width: 100%;
   width: 100vw;
-  padding: 30px 30px 30px 30px;
+  padding: 30px;
   box-sizing: border-box;
 }
 .biografiaJugador p {
@@ -294,7 +295,7 @@ body {
   max-width: 100%;
   width: 100vw;
   text-align: justify;
-  padding: 30px 30px 30px 30px;
+  padding: 30px;
   box-sizing: border-box;
 }
 .bloqueEscudo p {
