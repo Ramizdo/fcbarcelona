@@ -1,0 +1,43 @@
+@use "variables" as v;
+
+/*------ IDENTIDAD ------*/
+.containerBloque {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: v.$px-general * 3;
+    width: 100vw;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.bloque {
+    width: 100vw;
+    height: 40vh;
+    max-width: 100%;
+}
+
+.bloqueEscudo {
+    max-width: 100%;
+    text-align: justify;
+    padding: v.$px-general * 3;
+    box-sizing: border-box;
+
+    p {
+        text-indent: v.$px-general * 5;
+        font-size: v.$font-size-base - .4rem;
+    }
+}
+
+@media (min-width: v.$desktop) {
+
+    .containerBloque {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+}

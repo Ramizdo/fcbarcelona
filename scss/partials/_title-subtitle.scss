@@ -1,0 +1,17 @@
+@use "variables" as v;
+
+/*------ TITULO Y SUBTITULO ------*/
+.titulo {
+    font-size: v.$font-size-base;
+    color: v.$color-secundario;
+    margin: 0px 0px 15px 40px;
+}
+
+.containerSubTitulo {
+    margin: 0px 0px 15px 60px;
+}
+
+.subTitulo {
+    color: v.$color-primario;
+    font-size: v.$font-size-base;
+}

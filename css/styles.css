@@ -4,21 +4,31 @@
 /*------ TAMAÑO FUENTE BASE ------*/
 /*------ RESOLUCIONES DE PANTALLA ------*/
 /*------ ESPACIADO, MARGENES, PADDING ------*/
-/* ++++++++++++++++++++++++++++++ RESET ++++++++++++++++++++++++++++++ */
+/*------ RESET ------*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ++++++++++++++++++++++++++++++ BODY ++++++++++++++++++++++++++++++ */
+/*------ BODY ------*/
 body {
   position: relative;
   min-height: 100vh;
   font-family: "Teko", sans-serif;
 }
 
-/* ++++++++++++++++++++++++++++++ HEADER ++++++++++++++++++++++++++++++ */
+/*------ MAIN ------*/
+.main {
+  padding-top: 20px;
+}
+
+/*------ SECTION ------*/
+.section {
+  padding: 110px 0px 50px 0px;
+}
+
+/*------ HEADER ------*/
 #header {
   background-color: #004d98;
   width: 100%;
@@ -33,7 +43,7 @@ body {
   margin: 10px 0px 0px 30px;
 }
 
-/* ++++++++++++++++++++++++++++++ MENU ++++++++++++++++++++++++++++++ */
+/*------ MENU ------*/
 .container-fluid {
   background-color: #004d98;
 }
@@ -63,22 +73,12 @@ body {
   align-items: flex-end;
 }
 
-/* ++++++++++++++++++++++++++++++ MAIN ++++++++++++++++++++++++++++++ */
-.main {
-  padding-top: 20px;
-}
-
-/* ++++++++++++++++++++++++++++++ SECTION ++++++++++++++++++++++++++++++ */
-.section {
-  padding: 110px 0px 50px 0px;
-}
-
-/* ++++++++++++++++++++++++++++++ CAROUSEL ++++++++++++++++++++++++++++++ */
+/*------ CAROUSEL ------*/
 .carousel {
   margin-bottom: 30px;
 }
 
-/* ++++++++++++++++++++++++++++++ TITULO Y SUBTITULO ++++++++++++++++++++++++++++++ */
+/*------ TITULO Y SUBTITULO ------*/
 .titulo {
   font-size: 1.5rem;
   color: #a50044;
@@ -94,7 +94,7 @@ body {
   font-size: 1.5rem;
 }
 
-/* ++++++++++++++++++++++++++++++ INDEX ++++++++++++++++++++++++++++++ */
+/*------ INDEX ------*/
 .containerProximosPartidos1 {
   display: flex;
   flex-direction: column;
@@ -169,7 +169,7 @@ body {
     flex-direction: column;
   }
 }
-/* ++++++++++++++++++++++++++++++ PLANTILLA ++++++++++++++++++++++++++++++ */
+/*------ PLANTILLA ------*/
 .containerPortero,
 .containerDefensa,
 .containerCentrocampista,
@@ -253,7 +253,7 @@ body {
     font-size: 2.5rem;
   }
 }
-/* ++++++++++++++++++++++++++++++ PALMARES ++++++++++++++++++++++++++++++ */
+/*------ PALMARES ------*/
 .containerPalmares {
   display: flex;
   flex-direction: column;
@@ -272,7 +272,7 @@ body {
   text-indent: 20px;
 }
 
-/* ++++++++++++++++++++++++++++++ IDENTIDAD ++++++++++++++++++++++++++++++ */
+/*------ IDENTIDAD ------*/
 .containerBloque {
   display: flex;
   flex-direction: column;
@@ -293,7 +293,6 @@ body {
 
 .bloqueEscudo {
   max-width: 100%;
-  width: 100vw;
   text-align: justify;
   padding: 30px;
   box-sizing: border-box;
@@ -305,10 +304,13 @@ body {
 
 @media (min-width: 992px) {
   .containerBloque {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
   }
 }
-/* ++++++++++++++++++++++++++++++ HAZTE SOCIO ++++++++++++++++++++++++++++++ */
+/*------ HAZTE SOCIO ------*/
 .containerFormularioImagen {
   display: flex;
   flex-direction: column;
@@ -366,7 +368,7 @@ input {
     width: 20vw;
   }
 }
-/* ++++++++++++++++++++++++++++++ FOOTER ++++++++++++++++++++++++++++++ */
+/*------ FOOTER ------*/
 .footer {
   position: absolute;
   bottom: 0;

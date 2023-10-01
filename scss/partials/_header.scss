@@ -1,0 +1,49 @@
+@use "variables" as v;
+
+/*------ HEADER ------*/
+#header {
+    background-color: v.$color-primario;
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    margin: 10px 0px 0px 30px;
+}
+
+/*------ MENU ------*/
+.container-fluid {
+    background-color: v.$color-primario;
+}
+
+.navbar-toggler {
+    background-color: v.$color-terciario;
+    color: v.$color-primario;
+}
+
+.navbar-nav {
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        color: v.$color-terciario;
+        text-decoration: none;
+        font-size: v.$font-size-base + .3rem;
+
+        &:hover {
+            color: v.$color-blanco;
+        }
+    }
+}
+
+.lista-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

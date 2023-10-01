@@ -1,0 +1,21 @@
+@use "variables" as v;
+
+/*------ PALMARES ------*/
+.containerPalmares {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        text-align: justify;
+        text-indent: v.$px-general * 5;
+        font-size: v.$font-size-base;
+        margin-bottom: v.$px-general * 3;
+    }
+}
+
+.texto {
+    text-align: justify;
+    text-indent: v.$px-general * 2;
+}

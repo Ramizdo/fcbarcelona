@@ -1,0 +1,99 @@
+@use "variables" as v;
+
+/*------ PLANTILLA ------*/
+.containerPortero,
+.containerDefensa,
+.containerCentrocampista,
+.containerDelantero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: v.$px-general * 3;
+}
+
+.fotoJugador {
+    width: 100vw;
+    max-width: 100%;
+}
+
+.biografiaJugador {
+    background-color: v.$color-secundario-opacity;
+    max-width: 100%;
+    width: 100vw;
+    padding: v.$px-general * 3;
+    box-sizing: border-box;
+
+    p {
+        text-align: justify;
+        text-indent: v.$px-general * 5;
+        font-size: v.$font-size-base - .4rem;
+    }
+}
+
+.letraRoja {
+    color: v.$color-secundario;
+    font-size: v.$font-size-base + 1rem;
+}
+
+@media (min-width: v.$desktop) {
+
+    .containerPortero {
+        flex-direction: row;
+        margin-bottom: 0px;
+    }
+
+    .containerDefensa {
+        flex-direction: row-reverse;
+        margin-bottom: 0px;
+    }
+
+    .containerCentrocampista {
+        flex-direction: row;
+        margin-bottom: 0px;
+    }
+
+    .containerDelantero {
+        flex-direction: row-reverse;
+        margin-bottom: 0px;
+    }
+
+    .fotoJugador {
+        width: 468px;
+        height: 350px;
+    }
+
+    .biografiaJugador {
+        width: 468px;
+        height: 350px;
+
+        p {
+            font-size: v.$font-size-base - .5rem;
+        }
+    }
+
+    .letraRoja {
+        color: v.$color-secundario;
+        font-size: v.$font-size-base + .5rem;
+    }
+}
+
+@media (min-width: v.$desktop-xl) {
+    .fotoJugador {
+        width: 550px;
+        height: 350px;
+    }
+
+    .biografiaJugador {
+        width: 550px;
+        height: 350px;
+
+        p {
+            font-size: v.$font-size-base - .4rem;
+        }
+    }
+
+    .letraRoja {
+        font-size: v.$font-size-base + 1rem;
+    }
+}
