@@ -1,0 +1,60 @@
+@use "variables" as v;
+@use "mixin" as m;
+
+/*------ HAZTE SOCIO ------*/
+.containerFormularioImagen {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario {
+    @include m.column-center;
+    flex-wrap: wrap;
+    background-color: v.$color-secundario-opacity;
+    color: v.$color-secundario;
+    padding: v.$px-general*2 0px;
+    box-sizing: border-box;
+    gap: v.$px-general - 5px;
+}
+
+label,
+input {
+    width: 50vw;
+}
+
+.boton {
+    @include m.sizes(50vw, 30px);
+    background-color: v.$color-primario;
+    color: v.$color-blanco;
+    font-size: v.$font-size-base - .4rem;
+}
+
+.imgSocio {
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+
+    .containerFormularioImagen {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    label,
+    input {
+        width: 20vw;
+    }
+
+    .caja {
+        @include m.sizes(450px, 450px);
+    }
+
+    .imgSocio {
+        @include m.sizes(450px, 450px);
+    }
+
+    .boton {
+        width: 20vw;
+    }
+}

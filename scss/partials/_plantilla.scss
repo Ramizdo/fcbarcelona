@@ -1,0 +1,80 @@
+@use "variables" as v;
+@use "mixin" as m;
+
+/*------ PLANTILLA ------*/
+.containerJugador {
+    @include m.column-center;
+
+    &__foto {
+        @extend .containerJugador;
+        width: 100vw;
+        max-width: 100%;
+    }
+
+    &__biografia {
+        background-color: v.$color-secundario-opacity;
+        max-width: 100%;
+        width: 100vw;
+        padding: v.$px-general * 3;
+        box-sizing: border-box;
+
+        p {
+            text-align: justify;
+            text-indent: v.$px-general * 5;
+            font-size: v.$font-size-base - .4rem;
+        }
+
+        h2 {
+            color: v.$color-secundario;
+            font-size: v.$font-size-base + 1rem;
+        }
+    }
+}
+
+@media (min-width: v.$desktop) {
+
+    .containerJugador--row {
+        flex-direction: row;
+        margin-bottom: 0px;
+    }
+
+    .containerJugador--row-reverse {
+        flex-direction: row-reverse;
+        margin-bottom: 0px;
+    }
+
+    .containerJugador__foto {
+        @include m.sizes(468px, 350px);
+    }
+
+    .containerJugador__biografia {
+        @include m.sizes(468px, 350px);
+
+        p {
+            font-size: v.$font-size-base - .5rem;
+        }
+
+        h2 {
+            color: v.$color-secundario;
+            font-size: v.$font-size-base + .5rem;
+        }
+    }
+}
+
+@media (min-width: v.$desktop-xl) {
+    .containerJugador__foto {
+        @include m.sizes(550px, 350px);
+    }
+
+    .containerJugador__biografia {
+        @include m.sizes(550px, 350px);
+
+        p {
+            font-size: v.$font-size-base - .4rem;
+        }
+
+        h2 {
+            font-size: v.$font-size-base + 1rem;
+        }
+    }
+}

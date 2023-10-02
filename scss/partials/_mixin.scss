@@ -1,0 +1,20 @@
+/*------ MIXINS SIN PARAMETROS ------*/
+@mixin column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*------ MIXINS CON PARAMETROS ------*/
+@mixin sizes ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}

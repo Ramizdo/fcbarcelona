@@ -1,0 +1,25 @@
+@use "variables" as v;
+
+/*------ RESET ------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*------ BODY ------*/
+body {
+    position: relative;
+    min-height: 100vh;
+    font-family: v.$font-principal;
+}
+
+/*------ MAIN ------*/
+.main {
+    padding-top: v.$px-general * 2;
+}
+
+/*------ SECTION ------*/
+.section {
+    padding: 110px 0px 50px 0px;
+}

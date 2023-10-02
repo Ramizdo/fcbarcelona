@@ -1,0 +1,40 @@
+@use "variables" as v;
+@use "mixin" as m;
+
+/*------ IDENTIDAD ------*/
+.containerBloque {
+    @include m.column-center;
+    margin-bottom: v.$px-general * 3;
+    width: 100vw;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.bloque {
+    @include m.sizes(100vw, 40vh);
+    max-width: 100%;
+}
+
+.bloqueEscudo {
+    max-width: 100%;
+    text-align: justify;
+    padding: v.$px-general * 3;
+    box-sizing: border-box;
+
+    p {
+        text-indent: v.$px-general * 5;
+        font-size: v.$font-size-base - .4rem;
+    }
+}
+
+@media (min-width: v.$desktop) {
+
+    .containerBloque {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+}

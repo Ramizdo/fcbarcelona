@@ -1,0 +1,74 @@
+@use "variables" as v;
+@use "mixin" as m;
+
+
+/*------ HEADER ------*/
+#header {
+    @include m.sizes(100%, 120px);
+    background-color: v.$color-primario;
+    position: fixed;
+    z-index: 999;
+}
+
+.logo {
+    @include m.sizes(90px, 90px);
+    margin: v.$px-general 0px;
+}
+
+/*------ MENU ------*/
+.container-fluid {
+    background-color: v.$color-primario;
+}
+
+.navbar-toggler {
+    background-color: v.$color-terciario;
+    color: v.$color-primario;
+}
+
+.navbar-nav {
+    a {
+        @include m.column-center;
+        margin-bottom: v.$px-general - 5px;
+        height: v.$px-general * 4;
+        background-color: v.$color-primario;
+        color: v.$color-blanco;
+        border: 1px solid v.$color-blanco;
+        text-decoration: none;
+        font-size: v.$font-size-base + .3rem;
+
+        &:hover {
+            background-color: v.$color-terciario;
+            color: v.$color-primario;
+            border: 1px solid v.$color-terciario;
+        }
+    }
+
+    .nav-link.active {
+        color: v.$color-primario;
+        background-color: v.$color-terciario;
+    }
+}
+
+@media (min-width: v.$tablet-xs) {
+    .collapse {
+        justify-content: flex-end;
+    }
+
+    .navbar-nav {
+        a {
+            background-color: v.$color-primario;
+            border: none;
+
+            &:hover {
+                background-color: v.$color-primario;
+                color: v.$color-blanco;
+                border: none;
+            }
+        }
+
+        .nav-link.active {
+            color: v.$color-primario;
+            background-color: v.$color-terciario;
+        }
+    }
+}

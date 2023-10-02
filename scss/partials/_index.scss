@@ -1,0 +1,68 @@
+@use "variables" as v;
+@use "mixin" as m;
+
+/*------ INDEX ------*/
+.containerProximosPartidos1 {
+    @include m.column-center;
+    background-color: v.$color-secundario-opacity;
+    padding: v.$px-general*2 0px;
+    margin-bottom: v.$px-general*3;
+}
+
+.containerFecha1 {
+    @include m.column-center;
+
+    p {
+        font-size: v.$font-size-base - .3rem;
+        margin: 0px;
+    }
+}
+
+.containerLogoLaLiga1 {
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+.logoLaLiga {
+    @include m.sizes(110px, 30px);
+}
+
+.containerJornada1 {
+    p {
+        font-size: v.$font-size-base - .3rem;
+        margin: 0px;
+    }
+}
+
+.containerPartido1 {
+    @include m.row-center;
+}
+
+.logoEquipos {
+    @include m.sizes(50px, 50px);
+}
+
+.containerNombreEquipo {
+    @include m.row-center;
+}
+
+.spanContainerPartido {
+    margin: 0px;
+    font-size: v.$font-size-base;
+}
+
+.vs {
+    margin: 0px v.$px-general * 3;
+}
+
+@media (min-width: v.$desktop) {
+
+    .containerProximosPartidos1 {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .containerVersus {
+        @include m.column-center;
+    }
+}
