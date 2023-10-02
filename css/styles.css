@@ -4,6 +4,8 @@
 /*------ TAMAÑO FUENTE BASE ------*/
 /*------ RESOLUCIONES DE PANTALLA ------*/
 /*------ ESPACIADO, MARGENES, PADDING ------*/
+/*------ MIXINS SIN PARAMETROS ------*/
+/*------ MIXINS CON PARAMETROS ------*/
 /*------ RESET ------*/
 * {
   margin: 0;
@@ -30,17 +32,17 @@ body {
 
 /*------ HEADER ------*/
 #header {
-  background-color: #004d98;
   width: 100%;
   height: 120px;
+  background-color: #004d98;
   position: fixed;
-  z-index: 100;
+  z-index: 999;
 }
 
 .logo {
   width: 90px;
   height: 90px;
-  margin: 10px 0px 0px 30px;
+  margin: 10px 0px;
 }
 
 /*------ MENU ------*/
@@ -57,22 +59,43 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
-  color: #ffed02;
+  align-items: center;
+  margin-bottom: 5px;
+  height: 40px;
+  background-color: #004d98;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
   text-decoration: none;
   font-size: 1.8rem;
 }
 .navbar-nav a:hover {
-  color: #FFFFFF;
+  background-color: #ffed02;
+  color: #004d98;
+  border: 1px solid #ffed02;
+}
+.navbar-nav .nav-link.active {
+  color: #004d98;
+  background-color: #ffed02;
 }
 
-.lista-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+@media (min-width: 576px) {
+  .collapse {
+    justify-content: flex-end;
+  }
+  .navbar-nav a {
+    background-color: #004d98;
+    border: none;
+  }
+  .navbar-nav a:hover {
+    background-color: #004d98;
+    color: #FFFFFF;
+    border: none;
+  }
+  .navbar-nav .nav-link.active {
+    color: #004d98;
+    background-color: #ffed02;
+  }
 }
-
 /*------ CAROUSEL ------*/
 .carousel {
   margin-bottom: 30px;
@@ -82,11 +105,11 @@ body {
 .titulo {
   font-size: 1.5rem;
   color: #a50044;
-  margin: 0px 0px 15px 40px;
+  margin: 0px 0px 15px 20px;
 }
 
-.containerSubTitulo {
-  margin: 0px 0px 15px 60px;
+.containerSubTitulo, .subTitulo {
+  margin: 0px 0px 15px 30px;
 }
 
 .subTitulo {
@@ -167,89 +190,76 @@ body {
   .containerVersus {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 /*------ PLANTILLA ------*/
-.containerPortero,
-.containerDefensa,
-.containerCentrocampista,
-.containerDelantero {
+.containerJugador, .containerJugador__foto {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
 }
-
-.fotoJugador {
+.containerJugador__foto {
   width: 100vw;
   max-width: 100%;
 }
-
-.biografiaJugador {
+.containerJugador__biografia {
   background-color: rgba(165, 0, 68, 0.1);
   max-width: 100%;
   width: 100vw;
   padding: 30px;
   box-sizing: border-box;
 }
-.biografiaJugador p {
+.containerJugador__biografia p {
   text-align: justify;
   text-indent: 50px;
   font-size: 1.1rem;
 }
-
-.letraRoja {
+.containerJugador__biografia h2 {
   color: #a50044;
   font-size: 2.5rem;
 }
 
 @media (min-width: 992px) {
-  .containerPortero {
+  .containerJugador--row {
     flex-direction: row;
     margin-bottom: 0px;
   }
-  .containerDefensa {
+  .containerJugador--row-reverse {
     flex-direction: row-reverse;
     margin-bottom: 0px;
   }
-  .containerCentrocampista {
-    flex-direction: row;
-    margin-bottom: 0px;
-  }
-  .containerDelantero {
-    flex-direction: row-reverse;
-    margin-bottom: 0px;
-  }
-  .fotoJugador {
+  .containerJugador__foto {
     width: 468px;
     height: 350px;
   }
-  .biografiaJugador {
+  .containerJugador__biografia {
     width: 468px;
     height: 350px;
   }
-  .biografiaJugador p {
+  .containerJugador__biografia p {
     font-size: 1rem;
   }
-  .letraRoja {
+  .containerJugador__biografia h2 {
     color: #a50044;
     font-size: 2rem;
   }
 }
 @media (min-width: 1200px) {
-  .fotoJugador {
+  .containerJugador__foto {
     width: 550px;
     height: 350px;
   }
-  .biografiaJugador {
+  .containerJugador__biografia {
     width: 550px;
     height: 350px;
   }
-  .biografiaJugador p {
+  .containerJugador__biografia p {
     font-size: 1.1rem;
   }
-  .letraRoja {
+  .containerJugador__biografia h2 {
     font-size: 2.5rem;
   }
 }
@@ -270,6 +280,11 @@ body {
 .texto {
   text-align: justify;
   text-indent: 20px;
+}
+
+.letraRoja {
+  color: #a50044;
+  font-size: 2.5rem;
 }
 
 /*------ IDENTIDAD ------*/

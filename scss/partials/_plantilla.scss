@@ -1,99 +1,80 @@
 @use "variables" as v;
+@use "mixin" as m;
 
 /*------ PLANTILLA ------*/
-.containerPortero,
-.containerDefensa,
-.containerCentrocampista,
-.containerDelantero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: v.$px-general * 3;
-}
+.containerJugador {
+    @include m.column-center;
 
-.fotoJugador {
-    width: 100vw;
-    max-width: 100%;
-}
-
-.biografiaJugador {
-    background-color: v.$color-secundario-opacity;
-    max-width: 100%;
-    width: 100vw;
-    padding: v.$px-general * 3;
-    box-sizing: border-box;
-
-    p {
-        text-align: justify;
-        text-indent: v.$px-general * 5;
-        font-size: v.$font-size-base - .4rem;
+    &__foto {
+        @extend .containerJugador;
+        width: 100vw;
+        max-width: 100%;
     }
-}
 
-.letraRoja {
-    color: v.$color-secundario;
-    font-size: v.$font-size-base + 1rem;
+    &__biografia {
+        background-color: v.$color-secundario-opacity;
+        max-width: 100%;
+        width: 100vw;
+        padding: v.$px-general * 3;
+        box-sizing: border-box;
+
+        p {
+            text-align: justify;
+            text-indent: v.$px-general * 5;
+            font-size: v.$font-size-base - .4rem;
+        }
+
+        h2 {
+            color: v.$color-secundario;
+            font-size: v.$font-size-base + 1rem;
+        }
+    }
 }
 
 @media (min-width: v.$desktop) {
 
-    .containerPortero {
+    .containerJugador--row {
         flex-direction: row;
         margin-bottom: 0px;
     }
 
-    .containerDefensa {
+    .containerJugador--row-reverse {
         flex-direction: row-reverse;
         margin-bottom: 0px;
     }
 
-    .containerCentrocampista {
-        flex-direction: row;
-        margin-bottom: 0px;
+    .containerJugador__foto {
+        @include m.sizes(468px, 350px);
     }
 
-    .containerDelantero {
-        flex-direction: row-reverse;
-        margin-bottom: 0px;
-    }
-
-    .fotoJugador {
-        width: 468px;
-        height: 350px;
-    }
-
-    .biografiaJugador {
-        width: 468px;
-        height: 350px;
+    .containerJugador__biografia {
+        @include m.sizes(468px, 350px);
 
         p {
             font-size: v.$font-size-base - .5rem;
         }
-    }
 
-    .letraRoja {
-        color: v.$color-secundario;
-        font-size: v.$font-size-base + .5rem;
+        h2 {
+            color: v.$color-secundario;
+            font-size: v.$font-size-base + .5rem;
+        }
     }
 }
 
 @media (min-width: v.$desktop-xl) {
-    .fotoJugador {
-        width: 550px;
-        height: 350px;
+    .containerJugador__foto {
+        @include m.sizes(550px, 350px);
     }
 
-    .biografiaJugador {
-        width: 550px;
-        height: 350px;
+    .containerJugador__biografia {
+        @include m.sizes(550px, 350px);
 
         p {
             font-size: v.$font-size-base - .4rem;
         }
-    }
 
-    .letraRoja {
-        font-size: v.$font-size-base + 1rem;
+        h2 {
+            font-size: v.$font-size-base + 1rem;
+        }
     }
 }

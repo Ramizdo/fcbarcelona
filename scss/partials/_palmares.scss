@@ -1,11 +1,9 @@
 @use "variables" as v;
+@use "mixin" as m;
 
 /*------ PALMARES ------*/
 .containerPalmares {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include m.column-center;
 
     p {
         text-align: justify;
@@ -18,4 +16,9 @@
 .texto {
     text-align: justify;
     text-indent: v.$px-general * 2;
+}
+
+.letraRoja {
+    color: v.$color-secundario;
+    font-size: v.$font-size-base + 1rem;
 }

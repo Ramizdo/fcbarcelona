@@ -1,11 +1,9 @@
 @use "variables" as v;
+@use "mixin" as m;
 
 /*------ IDENTIDAD ------*/
 .containerBloque {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include m.column-center;
     margin-bottom: v.$px-general * 3;
     width: 100vw;
 
@@ -15,8 +13,7 @@
 }
 
 .bloque {
-    width: 100vw;
-    height: 40vh;
+    @include m.sizes(100vw, 40vh);
     max-width: 100%;
 }
 

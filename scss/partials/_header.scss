@@ -1,18 +1,18 @@
 @use "variables" as v;
+@use "mixin" as m;
+
 
 /*------ HEADER ------*/
 #header {
+    @include m.sizes(100%, 120px);
     background-color: v.$color-primario;
-    width: 100%;
-    height: 120px;
     position: fixed;
-    z-index: 100;
+    z-index: 999;
 }
 
 .logo {
-    width: 90px;
-    height: 90px;
-    margin: 10px 0px 0px 30px;
+    @include m.sizes(90px, 90px);
+    margin: v.$px-general 0px;
 }
 
 /*------ MENU ------*/
@@ -27,23 +27,48 @@
 
 .navbar-nav {
     a {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-        color: v.$color-terciario;
+        @include m.column-center;
+        margin-bottom: v.$px-general - 5px;
+        height: v.$px-general * 4;
+        background-color: v.$color-primario;
+        color: v.$color-blanco;
+        border: 1px solid v.$color-blanco;
         text-decoration: none;
         font-size: v.$font-size-base + .3rem;
 
         &:hover {
-            color: v.$color-blanco;
+            background-color: v.$color-terciario;
+            color: v.$color-primario;
+            border: 1px solid v.$color-terciario;
         }
+    }
+
+    .nav-link.active {
+        color: v.$color-primario;
+        background-color: v.$color-terciario;
     }
 }
 
-.lista-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+@media (min-width: v.$tablet-xs) {
+    .collapse {
+        justify-content: flex-end;
+    }
+
+    .navbar-nav {
+        a {
+            background-color: v.$color-primario;
+            border: none;
+
+            &:hover {
+                background-color: v.$color-primario;
+                color: v.$color-blanco;
+                border: none;
+            }
+        }
+
+        .nav-link.active {
+            color: v.$color-primario;
+            background-color: v.$color-terciario;
+        }
+    }
 }

@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "mixin" as m;
 
 /*------ HAZTE SOCIO ------*/
 .containerFormularioImagen {
@@ -7,10 +8,7 @@
 }
 
 .formulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include m.column-center;
     flex-wrap: wrap;
     background-color: v.$color-secundario-opacity;
     color: v.$color-secundario;
@@ -25,8 +23,7 @@ input {
 }
 
 .boton {
-    width: 50vw;
-    height: 30px;
+    @include m.sizes(50vw, 30px);
     background-color: v.$color-primario;
     color: v.$color-blanco;
     font-size: v.$font-size-base - .4rem;
@@ -50,13 +47,11 @@ input {
     }
 
     .caja {
-        width: 450px;
-        height: 450px;
+        @include m.sizes(450px, 450px);
     }
 
     .imgSocio {
-        width: 450px;
-        height: 450px;
+        @include m.sizes(450px, 450px);
     }
 
     .boton {

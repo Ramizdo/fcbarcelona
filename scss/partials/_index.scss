@@ -1,21 +1,16 @@
 @use "variables" as v;
+@use "mixin" as m;
 
 /*------ INDEX ------*/
 .containerProximosPartidos1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include m.column-center;
     background-color: v.$color-secundario-opacity;
     padding: v.$px-general*2 0px;
     margin-bottom: v.$px-general*3;
 }
 
 .containerFecha1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include m.column-center;
 
     p {
         font-size: v.$font-size-base - .3rem;
@@ -29,8 +24,7 @@
 }
 
 .logoLaLiga {
-    width: 110px;
-    height: 30px;
+    @include m.sizes(110px, 30px);
 }
 
 .containerJornada1 {
@@ -41,22 +35,15 @@
 }
 
 .containerPartido1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include m.row-center;
 }
 
 .logoEquipos {
-    width: 50px;
-    height: 50px;
+    @include m.sizes(50px, 50px);
 }
 
 .containerNombreEquipo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include m.row-center;
 }
 
 .spanContainerPartido {
@@ -76,7 +63,6 @@
     }
 
     .containerVersus {
-        display: flex;
-        flex-direction: column;
+        @include m.column-center;
     }
 }
