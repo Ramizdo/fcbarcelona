@@ -19,6 +19,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
+    <!-- LINK AOS ANIMACIONES -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- LINK CSS -->
     <link rel="stylesheet" href="../css/styles.css">
 
@@ -77,9 +80,10 @@
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.6862912792444!2d2.120244875858807!3d41.38089999639777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498f576297baf%3A0x44f65330fe1b04b9!2sSpotify%20Camp%20Nou!5e0!3m2!1ses-419!2scl!4v1692501647773!5m2!1ses-419!2scl"
                     width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" class="bloque">
+                    referrerpolicy="no-referrer-when-downgrade" class="bloque" data-aos="fade-right">
                 </iframe>
-                <img src="../img/CampNou.webp" alt="Estadio Spotify Camp Nou" class="bloque">
+                <img src="../img/CampNou.webp" alt="Estadio Spotify Camp Nou" class="bloque" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1000">
             </div>
 
             <!-- CONTENEDOR HIMNO-->
@@ -87,12 +91,13 @@
                 <h2 class="subTitulo">Himno</h2>
             </div>
             <div class="container containerBloque">
-                <img src="../img/Himno.jpeg" alt="Letra Himno FC Barcelona" class="bloque">
+                <img src="../img/Himno.jpeg" alt="Letra Himno FC Barcelona" class="bloque" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                 <iframe style="border-radius:12px"
                     src="https://open.spotify.com/embed/track/2W6IsRTTRAHnF3B5gcyCcq?utm_source=generator" width="100%"
                     height="352" frameBorder="0" allowfullscreen="autoplay"
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
-                    class="bloque">
+                    class="bloque" data-aos="fade-right">
                 </iframe>
             </div>
 
@@ -101,7 +106,7 @@
                 <h2 class="subTitulo">Escudo</h2>
             </div>
             <div class="container containerBloque">
-                <div class="bloqueEscudo">
+                <div class="bloqueEscudo" data-aos="fade-right">
                     <h2 class="letraRoja">Evolución del escudo</h2>
                     <p>
                         Era el escudo de la ciudad de Barcelona, embaldosado con cuatro cuartos. Arriba lucía una corona
@@ -118,7 +123,8 @@
                         identidad corporativa de la entidad.
                     </p>
                 </div>
-                <img src="../img/Escudos.jpeg" alt="Evolucion Escudos FC Barcelona" class="bloque">
+                <img src="../img/Escudos.jpeg" alt="Evolucion Escudos FC Barcelona" class="bloque" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1000">
             </div>
         </section>
 
@@ -135,6 +141,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
         </script>
+
+    <!-- SCRIPT AOS ANIMACIONES -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

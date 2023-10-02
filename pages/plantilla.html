@@ -19,6 +19,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
+    <!-- LINK AOS ANIMACIONES -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- LINK CSS -->
     <link rel="stylesheet" href="../css/styles.css">
 
@@ -74,9 +77,9 @@
 
                 <!-- CONTENEDOR PORTERO -->
                 <div class="containerJugador containerJugador--row">
-                    <img class="containerJugador__foto" src="../img/MarcAndreTerStegen.webp"
-                        alt="Marc André Ter Stegen">
-                    <div class="containerJugador__biografia">
+                    <img class="containerJugador__foto" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" src="../img/MarcAndreTerStegen.webp" alt="Marc André Ter Stegen">
+                    <div class="containerJugador__biografia" data-aos="zoom-in-down">
                         <h2>Marc André Ter Stegen</h2>
                         <p>
                             Marc-André ter Stegen firma como portero del FC Barcelona en verano de 2014 procedente del
@@ -99,8 +102,9 @@
 
                 <!-- CONTENEDOR DEFENSA -->
                 <div class="containerJugador containerJugador--row-reverse">
-                    <img class="containerJugador__foto" src="../img/RonaldAraujo.webp" alt="Ronald Araujo">
-                    <div class="containerJugador__biografia">
+                    <img class="containerJugador__foto" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" src="../img/RonaldAraujo.webp" alt="Ronald Araujo">
+                    <div class="containerJugador__biografia" data-aos="zoom-in-down">
                         <h2>Ronald Federico Araujo Da Silva</h2>
                         <p>
                             Ronald Araujo nació en Rivera, Uruguay, el 7 de marzo de 1999. El joven defensa central da
@@ -125,8 +129,9 @@
 
                 <!-- CONTENEDOR CENTROCAMPISTA -->
                 <div class="containerJugador containerJugador--row">
-                    <img class="containerJugador__foto" src="../img/Gavi.webp" alt="Gavi">
-                    <div class="containerJugador__biografia">
+                    <img class="containerJugador__foto" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" src="../img/Gavi.webp" alt="Gavi">
+                    <div class="containerJugador__biografia" data-aos="zoom-in-down">
                         <h2>Pablo Páez Gavira</h2>
                         <p>
                             Pablo Páez Gavira, conocido como "Gavi" (5 de agosto de 2004, Los Palacios y Villafranca)
@@ -152,8 +157,9 @@
 
                 <!-- CONTENEDOR DELANTERO -->
                 <div class="containerJugador containerJugador--row-reverse">
-                    <img class="containerJugador__foto" src="../img/RobertLewandoski.webp" alt="Robert Lewandoski">
-                    <div class="containerJugador__biografia">
+                    <img class="containerJugador__foto" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" src="../img/RobertLewandoski.webp" alt="Robert Lewandoski">
+                    <div class="containerJugador__biografia" data-aos="zoom-in-down">
                         <h2>Robert Lewandoski</h2>
                         <p>
                             En verano de 2022, Lewandowski decide abandonar la disciplina del Bayern de Múnich, equipo
@@ -193,6 +199,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
         </script>
+
+    <!-- SCRIPT AOS ANIMACIONES -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
